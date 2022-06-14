@@ -9,4 +9,7 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(blank=True, auto_now=True)
     
     def __str__(self):
-        return self.label    
+        return self.label
+    
+    class Meta:
+        ordering = ['due_date']
